@@ -17,8 +17,8 @@ async def status(ctx, *estado:str):
     await bot.change_presence(status=discord.Status.online, activity=game)
     now = datetime.datetime.now()
 async def Retroball(context):
-    print("hola")
-    numero_aleatorio = random.randint(0,12)
+    print("Retroball Usada")
+    numero_aleatorio = random.randint(0,18)
     if(numero_aleatorio == 0):
         await context.send('Hoy no, mañana si')
     elif(numero_aleatorio == 1):
@@ -45,10 +45,22 @@ async def Retroball(context):
         await context.send('Posiblemente')
     elif(numero_aleatorio == 12):
         await context.send('Dudoso la verdad')
+    elif(numero_aleatorio == 13):
+        await context.send('UwU')
+    elif(numero_aleatorio == 14):
+        await context.send('OwO')
+    elif(numero_aleatorio == 15):
+        await context.send('**Flan**')
+    elif(numero_aleatorio == 16):
+        await context.send('No te respondo que tengo que ir a por una lechuga')
+    elif(numero_aleatorio == 17):
+        await context.send("Negativo {}".format(ctx.message.author.mention))
+    elif(numero_aleatorio == 18):
+        await context.send("Afirmativo {}".format(context.message.author.mention))
 @bot.command()
 async def retroball(context):
-    print("hola")
-    numero_aleatorio = random.randint(0,12)
+    print("Retroball Usada")
+    numero_aleatorio = random.randint(0,18)
     if(numero_aleatorio == 0):
         await context.send('Hoy no, mañana si')
     elif(numero_aleatorio == 1):
@@ -75,6 +87,18 @@ async def retroball(context):
         await context.send('Posiblemente')
     elif(numero_aleatorio == 12):
         await context.send('Dudoso la verdad')
+    elif(numero_aleatorio == 13):
+        await context.send('UwU')
+    elif(numero_aleatorio == 14):
+        await context.send('OwO')
+    elif(numero_aleatorio == 15):
+        await context.send('**Flan**')
+    elif(numero_aleatorio == 16):
+        await context.send('No te respondo que tengo que ir a por una lechuga')
+    elif(numero_aleatorio == 17):
+        await context.send("Negativo {}".format(context.message.author.mention))
+    elif(numero_aleatorio == 18):
+        await context.send("Afirmativo {}".format(context.message.author.mention))
 @bot.command()
 async def monediwi(context):
     numero_aleatorio = random.randint(0,1)
@@ -128,16 +152,13 @@ async def div(rsp, n1:int , n2:int):
 @bot.command()
 async def multi(rsp, n1:int , n2:int):
     await rsp.send(n1 * n2)
-
+#Salida de musica
 @bot.command()
-async def salir(ctx):
-    voice = get(bot.voice_clients, guild=ctx.guild)
-    if(voice.is_connected):
-        voice.disconnect()
-    else:
-        await ctx.send('No estas conectado a ningun chat de voz')
-
+async def salir (ctx):
+  server = ctx.message.guild.voice_client
+  await server.disconnect()
+#Run Bot
 @bot.event
 async def on_ready():
     print('Bot en linea')
-bot.run('')
+bot.run('ODMyODExNDAwOTcxNTUwNzQw.YHpODg.6GqCEFL7VkxCH9fj7OzyHLUpA08')
