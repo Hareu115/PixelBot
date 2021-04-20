@@ -161,4 +161,4 @@ async def salir (ctx):
 @bot.event
 async def on_ready():
     print('Bot en linea')
-bot.run('ODMyODExNDAwOTcxNTUwNzQw.YHpODg.6GqCEFL7VkxCH9fj7OzyHLUpA08')
+bot.run('')
